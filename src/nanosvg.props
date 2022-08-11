@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ARTIFACTS)\NanoSVG\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="PropertySheets">
+  </ImportGroup>
+  <ItemGroup>
+      <ClCompile Include="$(ARTIFACTS)\NanoSvg\nanosvg.h">
+          <PrecompiledHeader></PrecompiledHeader>
+      </ClCompile>
+      <ClCompile Include="$(ARTIFACTS)\NanoSvg\nanosvgrast.h">
+          <PrecompiledHeader></PrecompiledHeader>
+      </ClCompile>
+      <ClCompile Include="$(ARTIFACTS)\NanoSvg\stb_image_write.h">
+          <PrecompiledHeader></PrecompiledHeader>
+      </ClCompile>
+  </ItemGroup>
+</Project>
