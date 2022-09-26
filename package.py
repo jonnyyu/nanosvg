@@ -6,7 +6,8 @@ from zipfile import ZipFile
 SRC_FILES= [
     'src/nanosvg.h',
     'src/nanosvgrast.h',
-    'example/stb_image_write.h',
+    'stb/stb_image.h',
+    'stb/stb_image_write.h',
     'src/nanosvg.props'
 ]
 
