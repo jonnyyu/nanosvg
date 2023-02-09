@@ -1397,13 +1397,6 @@ static void dumpEdges(NSVGrasterizer* r, const char* name)
 }
 */
 
-void nsvgRasterize(NSVGrasterizer* r,
-				   NSVGimage* image, float tx, float ty, float scale,
-				   unsigned char* dst, int w, int h, int stride)
-{
-	nsvgRasterizeEx(r, image, tx, ty, scale, dst, w, h, stride, NSVG__SUBSAMPLES, 1);
-}
-
 void nsvgRasterizeEx(NSVGrasterizer* r,
 				   NSVGimage* image, float tx, float ty, float scale,
 				   unsigned char* dst, int w, int h, int stride, int subSamples, char antialias)
@@ -1491,6 +1484,13 @@ void nsvgRasterizeEx(NSVGrasterizer* r,
 	r->width = 0;
 	r->height = 0;
 	r->stride = 0;
+}
+
+void nsvgRasterize(NSVGrasterizer* r,
+				   NSVGimage* image, float tx, float ty, float scale,
+				   unsigned char* dst, int w, int h, int stride)
+{
+	nsvgRasterizeEx(r, image, tx, ty, scale, dst, w, h, stride, NSVG__SUBSAMPLES, 1);
 }
 
 #endif // NANOSVGRAST_IMPLEMENTATION
